@@ -246,6 +246,66 @@ void kalkulator_diskon() {
     }
 }
 
+/*
+ * ================================================
+ *   splitbill.c — Fungsi 2: Kalkulator Split Bill
+ *   Dikerjakan oleh: Anggota 2
+ * ================================================
+ *
+ *  Input  : Total tagihan makan, jumlah orang
+ *  Output : Nominal yang dibayar per orang
+ */
+
+void kalkulator_splitbill() {
+    double total_tagihan, bayar_per_orang;
+    int jumlah_orang;
+
+    printf("  🍽️  KALKULATOR SPLIT BILL / PATUNGAN\n");
+    printf("  ----------------------------------------\n\n");
+
+    /* Input total tagihan */
+    printf("  Masukkan total tagihan (Rp): ");
+    scanf("%lf", &total_tagihan);
+
+    /* Validasi: tagihan tidak boleh negatif */
+    if (total_tagihan < 0) {
+        printf("\n  ⚠️  Total tagihan tidak boleh negatif!\n");
+        return;
+    }
+
+    /* Input jumlah orang */
+    printf("  Masukkan jumlah orang       : ");
+    scanf("%d", &jumlah_orang);
+
+    /* Validasi: minimal 1 orang */
+    if (jumlah_orang <= 0) {
+        printf("\n  ⚠️  Jumlah orang minimal 1!\n");
+        return;
+    }
+
+    /* Perhitungan */
+    bayar_per_orang = total_tagihan / jumlah_orang;
+
+    /* Output hasil */
+    printf("\n  ┌─────────────────────────────────┐\n");
+    printf("  │         HASIL PERHITUNGAN       │\n");
+    printf("  ├─────────────────────────────────┤\n");
+    printf("  │  Total Tagihan : Rp %12.2f │\n", total_tagihan);
+    printf("  │  Jumlah Orang  : %3d orang      │\n", jumlah_orang);
+    printf("  ├─────────────────────────────────┤\n");
+    printf("  │  💰 Per Orang  : Rp %12.2f │\n", bayar_per_orang);
+    printf("  └─────────────────────────────────┘\n");
+
+    /* Pesan tambahan */
+    if (jumlah_orang == 1) {
+        printf("\n  😅 Loh, makan sendirian? Hemat juga sih!\n");
+    } else if (jumlah_orang >= 10) {
+        printf("\n  🎊 Rame banget! Jangan lupa transfer ya!\n");
+    } else {
+        printf("\n  👥 Ingat, langsung transfer jangan PHP!\n");
+    }
+}
+
 
 /*Program Utama*/
 int main() {
