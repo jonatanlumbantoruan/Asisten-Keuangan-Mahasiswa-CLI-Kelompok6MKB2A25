@@ -6,11 +6,11 @@
  * ================================================
  *
  *  Struktur Kontribusi:
- *  - Ketua (Jonatan)       : main.c (Menu Utama, UI, Git Merge)
- *  - Anggota 1 (Ariq)      : diskon.c  (Fungsi 1 - Kalkulator Diskon)
- *  - Anggota 2 (Naufal)    : splitbill.c (Fungsi 2 - Split Bill)
- *  - Anggota 3 (Resthya)   : tabungan.c (Fungsi 3 - Bunga Tabungan)
- *  - Anggota 4 (Ridwan)    : uangjajan.c (Fungsi 4 - Sisa Uang Jajan)
+ *  - Ketua (Jonatan Sihombing (2501342))       : main.c (Menu Utama, UI, Git Merge)
+ *  - Anggota 1 (Muhammad Ariq Naufal Hakim (2510485))      : diskon.c  (Fungsi 1 - Kalkulator Diskon)
+ *  - Anggota 2 (Naufal Adika Adam (2503172))    : splitbill.c (Fungsi 2 - Split Bill)
+ *  - Anggota 3 (Resthya Raedhina Puteri (2504317))   : tabungan.c (Fungsi 3 - Bunga Tabungan)
+ *  - Anggota 4 (Ridwan Akmal Suandi (2504828))    : uangjajan.c (Fungsi 4 - Sisa Uang Jajan)
  */
 
 #include <stdio.h>
