@@ -25,7 +25,6 @@ void kalkulator_uangjajan() {
         printf("\n  ⚠️  Uang saku tidak boleh negatif!\n");
         return;
     }
-<<<<<<< HEAD:Ridwan.c
 
     /* Input estimasi pengeluaran */
     printf("  Masukkan estimasi pengeluaran (Rp)    : ");
@@ -67,6 +66,4 @@ void kalkulator_uangjajan() {
         printf("\n  😱 Wah, pengeluaran melebihi budget!\n");
         printf("     Pertimbangkan kurangi pengeluaran hari ini.\n");
     }
-=======
->>>>>>> c6c10b48869ea5c88e58f8f37d2043a570aa7c3c:uangjajan.c
 }
