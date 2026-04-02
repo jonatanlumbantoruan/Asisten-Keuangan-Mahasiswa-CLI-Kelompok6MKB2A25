@@ -67,6 +67,7 @@ void tekan_enter_lanjut() {
  *  Output : Sisa uang saku setelah dikurangi pengeluaran
  */
 
+ 
 #include <stdio.h>
 
 void kalkulator_uangjajan() {
