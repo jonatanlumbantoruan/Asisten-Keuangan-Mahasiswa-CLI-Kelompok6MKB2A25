@@ -66,9 +66,67 @@ void tekan_enter_lanjut() {
  *  Input  : Uang saku hari ini, estimasi pengeluaran hari ini
  *  Output : Sisa uang saku setelah dikurangi pengeluaran
  */
+/*
+ * ================================================
+ *   tabungan.c — Fungsi 3: Kalkulator Bunga Tabungan
+ *   Dikerjakan oleh: Anggota 3
+ * ================================================
+ *
+ *  Input  : Saldo awal, persentase bunga bulanan
+ *  Output : Total uang setelah ditambah bunga
+ */
 
- 
-#include <stdio.h>
+void kalkulator_tabungan() {
+    double saldo_awal, persen_bunga;
+    double nominal_bunga, saldo_akhir;
+
+    printf("  🏦  KALKULATOR BUNGA TABUNGAN SEDERHANA\n");
+    printf("  -----------------------------------------\n\n");
+
+    /* Input saldo awal */
+    printf("  Masukkan saldo awal (Rp)         : ");
+    scanf("%lf", &saldo_awal);
+
+    /* Validasi: saldo tidak boleh negatif */
+    if (saldo_awal < 0) {
+        printf("\n  ⚠️  Saldo tidak boleh negatif!\n");
+        return;
+    }
+
+    /* Input persentase bunga bulanan */
+    printf("  Masukkan bunga bulanan (%%)        : ");
+    scanf("%lf", &persen_bunga);
+
+    /* Validasi: bunga tidak boleh negatif */
+    if (persen_bunga < 0) {
+        printf("\n  ⚠️  Persentase bunga tidak boleh negatif!\n");
+        return;
+    }
+
+    /* Perhitungan bunga sederhana (1 bulan) */
+    nominal_bunga = saldo_awal * (persen_bunga / 100.0);
+    saldo_akhir   = saldo_awal + nominal_bunga;
+
+    /* Output hasil */
+    printf("\n  ┌──────────────────────────────────────┐\n");
+    printf("  │           HASIL PERHITUNGAN          │\n");
+    printf("  ├──────────────────────────────────────┤\n");
+    printf("  │  Saldo Awal      : Rp %12.2f   │\n", saldo_awal);
+    printf("  │  Bunga %.2f%%/bln : Rp %12.2f   │\n", persen_bunga, nominal_bunga);
+    printf("  ├──────────────────────────────────────┤\n");
+    printf("  │  💰 Saldo Akhir  : Rp %12.2f   │\n", saldo_akhir);
+    printf("  └──────────────────────────────────────┘\n");
+
+    /* Pesan motivasi menabung */
+    if (saldo_awal == 0) {
+        printf("\n  😬 Saldo nol bung... Yuk mulai nabung!\n");
+    } else if (saldo_awal >= 1000000) {
+        printf("\n  🌟 Keren! Rajin nabung nih, terus pertahankan!\n");
+    } else {
+        printf("\n  💪 Mantap! Konsisten nabung ya biar makin gede!\n");
+    }
+}
+
 
 void kalkulator_uangjajan() {
     double uang_saku, total_pengeluaran, sisa_uang;
